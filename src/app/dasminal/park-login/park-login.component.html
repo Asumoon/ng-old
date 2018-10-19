@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="card card-inverse card-danger text-center">
+    <div class="card-body">
+      <blockquote class="card-blockquote">
+        <h3>Welcome to Admin Pannel</h3>
+        <p>This is the login page for publicpark </p>       
+      </blockquote>
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-3 d-none d-md-block"></div>   
+     <div class="col-12 col-md-6">
+      <div class="card">
+        <h3 class="card-header"><i> Input your Username and Password </i></h3>
+        <div class="card-body">
+          <form (submit)="onLoginSubmit()">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label text-right"><b>User Name</b></label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="Uname"> 
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label text-right"> <b>Password</b></label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" placeholder="Password">          
+              </div>
+            </div>
+
+            <div class="form-group"> 
+                <div class="g-recaptcha" data-sitekey="6LfG5zEUAAAAAA4xxKEJmN1oOvTOB2fl2lXpzWHx"></div>
+            </div>
+
+            <div class="form-group row text-center">
+              <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Log in</button>
+                <button type="reset" class="btn btn-primary">Reset</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer text-muted text-center">
+          <a href="#" class="btn btn-primary">Go to Homepage</a>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>

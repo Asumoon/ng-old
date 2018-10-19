@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row" *ngFor="let singleTecArt of technologyArticle; let i=index">
+    <div class="col-md-9 text-justify">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <h3> {{singleTecArt.mainArticle.mainTitle}}</h3>
+          </div>
+          <div class="card-text">
+            <img src="http://www.propertiesnepal.com/wp-content/uploads/2015/03/pokhara-city.jpg?x14183" class="img-fluid rounded mx-auto d-block">
+            <p>{{singleTecArt.mainArticle.mainBody}}</p>
+            <p>There must be date</p>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-outline-primary float-left">Previous</button>
+            <button class="btn btn-outline-primary">All Article</button>
+            <button class="btn btn-outline-primary float-right">Next</button>
+          </div>
+          <hr>
+          Share buttion chienxa ya
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <p>this is left side</p>
+      <p>Advertisement</p>
+      <p>something new</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-text">
+            <p>Here must be realted article</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,178 @@
+<div class="container">
+  <div class="row"> 
+    
+    <div class="col-12 text-center text-danger">
+      <p>need to Format Decoration / <strong> Validation </strong> </p>
+      <p>need to add article time ! Important Work</p>
+      <p>Image backend and Front Part all Remaining</p>
+      <p>ALL Comment Section Remaining <br> 1-Facebook only  or <br> 2- My own Database ???? </p>
+    </div>
+
+
+    <div class="col-12">
+      <div class="card">
+        <h3 class="card-header text-center"><i>Add New Article</i></h3>
+        <div class="card-body">
+          <div class="card-text">
+            <form (ngSubmit)="artSubmit()">
+              <div class="form-group">
+                <label for="categorySelect"><b>News Category :-</b></label>
+                <select [(ngModel)]="category" name="category" class="form-control custom-select" id="categorySelect">
+                      <option>Technology</option>
+                      <option>Computer</option>
+                      <option>History</option>
+                      <option>Life-Hack</option>
+                      <option>Tips-and-Tricks</option>
+                      <option>More</option>                      
+                    </select>
+              </div>
+              <div class="form-group">
+                <label for="authorNameko"><b>Author-Name :-</b></label>
+                <input type="text" [(ngModel)]="author" name="author" class="form-control" id="authorNameko"
+                  placeholder="Author Name">
+              </div>
+              <div class="form-group">
+                <label for="articleIdko"><b>Id of Article :-</b></label>
+                <input type="text" [(ngModel)]="artId" name="artId" class="form-control" id="articleIdko"
+                  placeholder="My Id of Article">
+              </div>
+              <div class="form-group">
+                <label for="articleURLko"><b>URL of Article :-</b></label>
+                <input type="text" [(ngModel)]="postURL" name="postURL" class="form-control" id="articleURLko"
+                  placeholder="URL of Article">
+              </div>
+
+              <fieldset class="form-group">
+                <div class="row">
+                  <legend class="col-form-legend col-sm-12"><b>Do You want to publish Article</b></legend>
+                  <div class="col-sm-auto form-check">
+                    <label class="form-check-label">
+                          <input class="form-check-input" type="radio" [(ngModel)]="published" name="published" id="gridRadios1" value="true" checked>
+                          Yes
+                        </label>
+                  </div>
+                  <div class="col-sm-auto form-check">
+                    <label class="form-check-label">
+                          <input class="form-check-input" type="radio" [(ngModel)]="published" name="published" id="gridRadios2" value="false">No
+                        </label>
+                  </div>
+                </div>
+              </fieldset>              
+              <div class="form-group">
+                <label for="artickeTitlekomain"><b>Article - Title  // Main - Topic :-</b></label>
+                <input type="email" [(ngModel)]="mainTitle" name="mainTitle" class="form-control" id="artickeTitlekomain" placeholder="Article-Title">
+              </div>
+              <!-- <div class="form-group">
+                <label for="exampleInputEmail1"><b>Article short description :-</b></label>
+                <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Article short description"></textarea>
+              </div> -->
+              <div class="form-group">
+                <label for="exampleTextarea"><b>Article Content // Full-Description :-</b></label>
+                <textarea class="form-control" [(ngModel)]="mainBody" name="mainBody" id="exampleTextarea" rows="15" placeholder="All Article Content"></textarea>
+              </div>
+              <!--ALL-Tags -->
+              <div class="form-group row">
+                <label for="tag-name" class="col-sm-2 col-form-label text-right"><b>All-Tags :-</b></label>
+                <div class="col-sm-5">
+                  <input type="text" [(ngModel)]="tagOne" name="tagOne" class="form-control mb-2" id="tag-name" placeholder="Tag-1">
+                  <input type="text" [(ngModel)]="tagTwo" name="tagTwo" class="form-control  mb-2" id="tag-name" placeholder="Tag-2">
+                </div>
+                <div class="col-sm-5">
+                  <input type="text" [(ngModel)]="tagThree" name="tagThree" class="form-control  mb-2" id="tag-name" placeholder="Tag-3">
+                  <input type="text" [(ngModel)]="tagFour" name="tagFour" class="form-control  mb-2" id="tag-name" placeholder="Tag-4">
+                </div>
+              </div>
+
+              <!--Image -->
+              <div class="row py-3">
+                <div class="form-group col-12 col-md-4">
+                  <label for="exampleInputFile"><b>Image <strong class="text-danger">1</strong> for the Article </b></label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                  <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                </div>
+                <div class="form-group col-12 col-md-4">
+                  <label for="exampleInputFile"><b>Image <strong class="text-info">2</strong> for the Article </b></label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                  <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                </div>
+                <div class="form-group col-12 col-md-4">
+                  <label for="exampleInputFile"><b>Image <strong class="text-danger">3</strong> for the Article </b></label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                  <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="row py-3">
+                <div class="form-group col-12 col-md-4">
+                  <label for="exampleInputFile"><b>Image <strong class="text-info">4</strong> for the Article </b></label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                  <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                </div>
+                <div class="form-group col-12 col-md-4">
+                  <label for="exampleInputFile"><b>Image <strong class="text-danger">5</strong> for the Article </b></label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                  <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                </div>
+                <div class="form-group col-12 col-md-4">
+                  <label for="exampleInputFile"><b>Image <strong class="text-info">6</strong> for the Article </b></label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                  <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="row py-3">
+                <div class="form-group col-12 col-md-4">
+                  <label for="exampleInputFile"><b>Image <strong class="text-danger">7</strong> for the Article </b></label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                  <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                </div>
+                <div class="form-group col-12 col-md-4">
+                  <label for="exampleInputFile"><b>Image <strong class="text-info">8</strong> for the Article </b></label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                  <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                </div>
+                <div class="form-group col-12 col-md-4">
+                  <label for="exampleInputFile"><b>Image <strong class="text-danger">9</strong> for the Article </b></label>
+                  <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                  <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                </div>
+              </div>
+             
+              <hr>
+
+              <div class="row py-3">
+                  <div class="form-group col-12 col-md-4">
+                    <label for="exampleInputFile"><b>Image <strong class="text-info">10</strong> for the Article </b></label>
+                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                    <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                  </div>
+                  <div class="form-group col-12 col-md-4">
+                    <label for="exampleInputFile"><b>Image <strong class="text-danger">11</strong> for the Article </b></label>
+                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                    <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                  </div>
+                  <div class="form-group col-12 col-md-4">
+                    <label for="exampleInputFile"><b>Image <strong class="text-info">12</strong> for the Article </b></label>
+                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                    <small id="fileHelp" class="form-text text-muted">Image for the article and other info </small>
+                  </div>
+              </div>
+
+              <div class="form-group row text-center">
+                <div class="offset-sm-2 col-sm-10">
+                  <button type="submit" class="btn btn-outline-success mx-2"> Submit </button>
+                  <button type="reset" class="btn btn-outline-info mx-2"> Reset </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>

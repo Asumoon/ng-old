@@ -1,0 +1,20 @@
+.navbar {
+  border-bottom: #98B48D 1px solid;
+  opacity: 0.9;
+}
+
+.asu-nav {
+  background-color: #0c0c0c;
+}
+.asu-nav>a{
+    color: #fff
+}
+.asu-nav>a:hover,.asu-nav>a:focus{
+    color: #56B84D;
+ }
+
+@media screen and (max-width:770px) {
+  .navbar {
+    opacity: 1;
+  }
+}

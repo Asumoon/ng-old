@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #eaeaea !important;
+    /* color: #f0f0f0 !important; */
+}
+hr{
+    margin-top: .5rem !important;
+    margin-bottom: .5rem !important;    
+   border-top-width: 2px !important;
+}
+
+.tcp-crdcont{
+    margin-bottom: 0.5rem;
+}
+
+.tcp-crdpad{
+    padding: 0.5rem !important;
+}
+
+.tcp-crdimg-lft{  
+    margin-top: 5px;  
+    margin-right: 5px;
+}
+.tcp-crdimgb-lft{  
+    margin-top: 2px;  
+    margin-right: 8px;
+}

@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <div class="card tcp-crdcont" *ngFor="let sTechnologyArticles of technologyArticles; let i=index">
+        <div class="card-body text-justify">
+          <h3 class="card-title"><a [routerLink]="['./', sTechnologyArticles._id]" >{{sTechnologyArticles.mainArticle.mainTitle}}</a></h3>
+          <div class="row card-text">
+            <div class="col-12">
+              <div class="tcp-crdimgb-lft" style="float:left"> <img src="http://www.propertiesnepal.com/wp-content/uploads/2015/03/pokhara-city.jpg?x14183" class="img-fluid rounded mx-auto d-block"
+                  width="265px" height="156px" alt="image is coming Soon">
+              </div>
+              <div style="text-align:left">
+                <p>By the 12th Century, when Christian crusaders first roared through Lialready had its own culinary culture
+                  By the 12th Century, when Christian crusaders first roared through Lialready had its own culinary culture</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <small>
+                    <a href="" class="card-link">Time</a>
+                    <a href="" class="card-link"> {{sTechnologyArticles.author}} </a>
+                </small>
+            </div>
+            <div class="col-md-6">
+              <small>
+                    <a href="" class="card-link">{{sTechnologyArticles.category}}</a>
+                    <a href="" class="card-link"> {{sTechnologyArticles.tags}} </a>
+                    <a href="" class="card-link">{{sTechnologyArticles.tags}}</a>
+                </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="col-12 col-md-4">
+
+      <app-tab-common-latest></app-tab-common-latest>
+
+      <br>
+
+      <div class="card">
+        <div class="card-body row tcp-crdpad">
+          <div *ngFor="let sTechnologyArticles of technologyArticles; let i=index">
+            <div *ngIf="i < 6">
+              <div class="col-12">
+                <h5><a (click)="onSelectTitle(sTechnologyArticles)" class="card-link"> {{sTechnologyArticles.mainArticle.mainTitle}}</a></h5>
+              </div>
+              <div class="col-12">
+                <div class="tcp-crdimg-lft" style="float:left"> <img src="http://www.propertiesnepal.com/wp-content/uploads/2015/03/pokhara-city.jpg?x14183" class="img-fluid rounded mx-auto d-block"
+                    width="95px" height="160px" alt="image is coming Soon">
+                </div>
+                <div style="text-align:left">
+                  <h6>12th Century, when Christian crusaders first 12th Century, when Christian crusaders first roared</h6>
+                </div>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="card">
+        <div class="card-body row tcp-crdpad">
+          <div class="col-12" *ngFor="let sTechnologyArticles of technologyArticles; let i=index">
+            <div *ngIf="i < 6" class="py-1">
+              <div class="tcp-crdimg-lft" style="float:left">
+                <img src="http://www.propertiesnepal.com/wp-content/uploads/2015/03/pokhara-city.jpg?x14183" class="img-fluid rounded mx-auto d-block"
+                  width="75px" height="100px" alt="image is coming Soon">
+              </div>
+              <div style="text-align:left">
+                <h6><a href="" class="card-link"> {{sTechnologyArticles.mainArticle.mainTitle}}</a>                </h6>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="card">
+          <div class="card-body">
+            <div *ngFor="let sTechnologyArticles of technologyArticles; let i=index">
+              <h6 *ngIf="i < 11"><a href="" class="card-link"> {{sTechnologyArticles.mainArticle.mainTitle}}</a>
+                <hr> </h6>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="text-center">Pagination system baki xa </h3>
+    </div>
+  </div>
+</div>

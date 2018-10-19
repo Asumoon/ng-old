@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <div class="card tcp-crdcont" *ngFor="let singleHistoryArt of allHistoryArticle">
+        <div class="card-body text-justify">
+          <h3 class="card-title"><a href="#">{{singleHistoryArt.mainArticle.mainTitle}}</a></h3>
+          <div class="row card-text">
+            <div class="col-12">
+              <div class="tcp-crdimgb-lft" style="float:left">
+                  <img src="http://www.propertiesnepal.com/wp-content/uploads/2015/03/pokhara-city.jpg?x14183" class="img-fluid rounded mx-auto d-block"
+                  width="265px" height="156px">
+              </div>
+              <div style="text-align:left">
+                <p>  Christian crusaders first roared through Lialready had its own culinary By the 12th Century, when Christian crusaders first roared through  Christian crusaders first roared through Lialready had its own culinary Lialready had its own culinary culture By the 12th Century, when Christian crusaders first roared through Lialready had its own culinary culture  Christian crusaders first roared through Lialready had its own culinary</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <small>
+                    <a href="" class="card-link">Time</a>
+                    <a href="" class="card-link"> {{singleHistoryArt.author}} </a>
+                </small>
+            </div>
+            <div class="col-md-6">
+              <small>
+                    <a href="" class="card-link">{{singleHistoryArt.category}}</a>
+                    <a href="" class="card-link"> {{singleHistoryArt.tags}} </a>
+                    <a href="" class="card-link">{{singleHistoryArt.tags}}</a>
+                </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="card">
+        <div class="card-body row tcp-crdpad">
+          <div class="col-12">
+            <div class="tcp-crdimg-lft" style="float:left" > 
+              <img src="http://www.propertiesnepal.com/wp-content/uploads/2015/03/pokhara-city.jpg?x14183" class="img-fluid rounded mx-auto d-block"
+                width="95px" height="110px" alt="image is coming Soon">
+            </div>
+            <div style="text-align:left">
+              <h6><a href="" class="card-link"> 12th Century, when Christian crusaders first 12th Century, when Christian crusaders first roared</a>                </h6>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <div *ngFor="let singleHistoryArt of allHistoryArticle">
+            <h6><a href="" class="card-link"> {{singleHistoryArt.mainArticle.mainTitle}}</a> </h6>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

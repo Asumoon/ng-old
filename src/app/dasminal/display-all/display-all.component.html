@@ -1,0 +1,95 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 mt-4">
+      <div class="list-group">
+        <a class="list-group-item list-group-item-action" [class.active]="filterBy=='all'" (click)="filterBy='all'"><b>All Article</b></a>
+        <a class="list-group-item list-group-item-action" [class.active]="filterBy=='Technology'" (click)="filterBy='Technology'"><b>Technology</b></a>
+        <a class="list-group-item list-group-item-action" [class.active]="filterBy=='Entertainment'" (click)="filterBy='Entertainment'"><b>Entertainment</b></a>        
+        <a class="list-group-item list-group-item-action" [class.active]="filterBy=='Computer'" (click)="filterBy='Computer'"><b>Computer</b></a>
+        <a class="list-group-item list-group-item-action" [class.active]="filterBy=='History'" (click)="filterBy='History'"><b>History</b></a>
+        <a class="list-group-item list-group-item-action" [class.active]="filterBy=='Life-Hack'" (click)="filterBy='Life-Hack'"><b>Life-Hack</b></a>
+        <a class="list-group-item list-group-item-action" [class.active]="filterBy=='Tips-and-Tricks'" (click)="filterBy='Tips-and-Tricks'"><b>Tips & Tricks</b></a>
+        <a class="list-group-item list-group-item-action" [class.active]="filterBy=='More'" (click)="filterBy='More'"><b>More</b></a>
+      </div>
+    </div>
+
+    <div class="col-md-10"> 
+      <div class="alert alert-dark my-1" role="alert">
+        <div class="text-center text-danger">
+          <h4 class="alert-heading">Dashboard-of-Article</h4>
+          <a href="#" class="alert-link">Welcome</a> // Article Demo // Editing Article // Deleting Article
+        </div>
+      </div>
+      <hr class="my-2">
+
+      <div class="row">
+        <div class="col-md-6" *ngFor="let sDisplayArticles of (displayArticles | imageFilter:filterBy); let i=index">
+          <div class="card text-center my-2">
+            <h4 class="card-header">{{sDisplayArticles.category}}</h4>
+            <div class="card-body">
+              <h3 class="card-text">{{sDisplayArticles.mainArticle.mainTitle}}</h3>
+            </div>
+            <div class="card-footer">
+              <div class="card-title">
+                <small class="text-muted"> 3 mins ago </small>
+                <a href="#" class="card-link"> Treding </a>
+                <a href="#" class="card-link"> {{sDisplayArticles.author}}</a>
+              </div>
+              <hr>
+              <a class="card-link"><button type="button" class="btn btn-outline-info" data-toggle="modal" data-target=".bd-example-modal-lg"> View-Article </button> </a>
+              <a [routerLink]="['/new']" class="card-link"><button type="button" class="btn btn-outline-info"> Edit-Article </button> </a>
+              <a class="card-link"><button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteArticle"> Delete </button> </a>
+              <!-- yo button lai paxe hataune mathiko lai activate garne hai  -->
+              <a class="card-link"><button type="button" class="btn btn-outline-danger disabled" (click)="onSelectTitle(sDisplayArticles._id)"> Delete </button> </a>
+            </div>
+            <!-- Model For the Article View -->
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="myLargeModalLabel">View Article Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div>
+                      <h4> View The detail of the article parts</h4>
+                      <p> View The detail of the article parts Body part of the article all description part </p>
+
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal for to delete article -->
+            <div class="modal fade" id="deleteArticle" tabindex="-1" role="dialog" aria-labelledby="deleteModelBox" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModelBox">Delete Message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                  </div>
+                  <div class="modal-body">
+                    <h4 class="text-danger">{{sDisplayArticles.mainArticle.mainTitle}}</h4>
+                    <div class="text-info"> Do you want to delete the article are you sure ? {{sDisplayArticles._id}}</div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger disabled" (click)="onSelectTitle(sDisplayArticles._id)"> Delete Article</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
